@@ -1,6 +1,6 @@
    
 #defined a different module for opening of json files
-from jsonfile import *
+from jsonModule.jsonfile import *
 
 global sum
 sum=0
@@ -43,7 +43,7 @@ def result(count):
 
 
 #reading from the file
-jsonInput = read("./bmi_project/data.json")
+jsonInput = read(".\jsonModule\data.json")
 
 
 #adding bmi bmi_category, healthRisk as 3 new coloums to the file object
@@ -57,8 +57,8 @@ for i in jsonInput:
 
 #writing into the dataUpdated.json file
 try: 
-    write("./bmi_project/dataUpdated.json",jsonInput)
-    print("File Updated, Please check \'dataUpdated.json\'.")
+    write(".\jsonModule\dataUpdated.json",jsonInput)
+    print("File Updated, Please check \'jsonModule/dataUpdated.json\'.")
 
 except:
     print("File updation failed. Please Check for errors")
